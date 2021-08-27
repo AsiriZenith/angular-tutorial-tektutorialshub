@@ -1,0 +1,58 @@
+<p>Interpolation</p>
+Welcome, {{firstName}} {{lastName}}
+
+<p>Property Binding</p>
+<h1 [innerText]="title"></h1>
+<button [disabled]="isDisabled">I am disabled</button> <br>
+
+<p>event binding</p>
+<button (click)="clickMe()">Click Me</button>
+<p>You have clicked {{clickCount}}</p> <br>
+
+<p>$event Payload</p>
+<input (input)="handleInput($event)">
+<p>You have entered {{value}}</p> <br>
+
+<h2>Template Reference Variable</h2>
+<input #el (input)="handleInput1(el)">
+<p>You have entered {{val}}</p><br>
+
+<p>Key event filtering (with keytype)</p>
+<input (keyup)="keytypevalue1= $any($event.target).value" />
+<p>You entered {{keytypevalue1}}</p> <br>
+
+<p>Key event filtering (with keytype.enter)</p>
+<input (keyup.enter)="keytypevalue2=$any($event.target).value">
+<p>You entered {{keytypevalue2}}</p> <br>
+
+<p>Two way using property & Event Binding</p>
+<input type="text" [value]="name" (input)="name=$any($event.target).value">
+<p> You entered {{name}}</p>
+<button (click)="clearName()">Clear</button> <br>
+
+<p>Two-way binding</p>
+<input type="text" name="value" [(ngModel)]="twowayvalue">
+<p> You entered {{twowayvalue}}</p>
+<button (click)="clearValue()">Clear</button> <br>
+
+<p>ngModelChange</p>
+Name:
+<input type="text" name="name" ngModel (ngModelChange)="nameChanged($event)"> <br>
+
+<br>
+<input type="text" name="email" [(ngModel)]="email">
+<p>You entered {{email}}</p>
+
+<p>ngModelChange with ngModel</p>
+<input [(ngModel)]="_firstName" (ngModelChange)="firstNameChanged($event)"/>
+<p>You entered {{_firstName}}</p>
+
+<p>Change Event</p>
+Name <input type="text" name="name1" (change)="name1Changed($event)">
+ 
+<br>
+country
+<select name="country1" (change)="country1Changed($event)" >
+  <option [ngValue]="null" disabled>Select Country</option>
+  <option *ngFor="let country of countries" [ngValue]="country.id">{{country.name}}</option>
+</select>
