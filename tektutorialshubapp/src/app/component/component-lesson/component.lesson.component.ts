@@ -2,8 +2,8 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'com-component',
-    templateUrl: './component.lesson.component.html',
-    styleUrls: ['./component.lesson.component.css']
+    templateUrl: './component.lesson.component.html'
+    //styleUrls: ['./component.lesson.component.css']
 })
 
 export class ComponentComponent {
@@ -19,7 +19,7 @@ export class ComponentComponent {
     /* event binding */
     clickCount = 0
     clickMe() {
-        this.clickCount++;
+        this.clickCount++
     }
 
     /* $event Payload */
