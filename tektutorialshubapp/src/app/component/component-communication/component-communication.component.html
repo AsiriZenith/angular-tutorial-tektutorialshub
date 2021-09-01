@@ -1,0 +1,12 @@
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">decrement</button> <br>
+
+<!-- <child-component [count]=Counter></child-component> -->
+
+<br>
+<p> Message : <input type='text' [(ngModel)]='message'> </p>
+<p> Code : <input type='text' [(ngModel)]='code'></p>
+<p> Name : <input type='text' [(ngModel)]='name'></p>
+<p><button (click)="updateCustomer()">Update </button>
+
+<child-component [message]=message [customer]=customer></child-component>
