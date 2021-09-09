@@ -11,7 +11,6 @@ export default class Validation {
         }
   
         if (control?.value !== checkControl?.value) {
-          //controls.get(checkControlName).setErrors({ matching: true });
           controls.get(checkControlName)?.setErrors({matching:true})
           return { matching: true };
         } else {
