@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ObservableComponent } from './component/observable-lesson/observable.component';
 import { ComponentComponent } from './component/component-lesson/component.lesson.component';
 import { CustomValidatorComponent } from './component/custom-validator/custom-validator.component';
 import { ChildComponent } from './component/component-communication/child.component/child.component';
@@ -17,6 +18,7 @@ import { EventemitterChildComponent } from './component/eventemitter-lesson/even
     AppComponent,
     ChildComponent,
     ComponentComponent,
+    ObservableComponent,
     ValidationComponent,
     CommunicationComponent,
     CustomValidatorComponent,
